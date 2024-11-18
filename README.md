@@ -5,10 +5,14 @@
 To develop a deep neural network for Malaria infected cell recognition and to analyze the performance.
 
 ## Problem Statement and Dataset
+Aims to create an algorithm that can detect malaria-infected cells in blood samples using deep learning techniques. The goal is to develop a model that can accurately identify infected cells and distinguish them from healthy ones. The performance of the model will be evaluated based on its accuracy, precision, recall, and F1 score. This problem statement is important because it can help improve the diagnosis of malaria and reduce the time and cost associated with manual diagnosis.
+
+Malaria dataset of 27,558 cell images with an equal number of parasitized and uninfected cells. A level-set based algorithm was applied to detect and segment the red blood cells. The images were collected and annotated by medical professionals.Here we build a convolutional neural network model that is able to classify the cells.
 
 ## Neural Network Model
 
-Include the neural network model diagram.
+![image](https://github.com/user-attachments/assets/415f912c-013f-49c4-93a4-47436fbe8fca)
+
 
 ## DESIGN STEPS
 
@@ -194,18 +198,24 @@ plt.show()
 
 ### Training Loss, Validation Loss Vs Iteration Plot
 
-Include your plot here
+![Screenshot 2024-11-18 220706](https://github.com/user-attachments/assets/542c781b-de1d-45fe-8b54-f096171d9fc7)
+
 
 ### Classification Report
 
-Include Classification Report here
+![Screenshot 2024-11-18 220736](https://github.com/user-attachments/assets/04a26d01-67ca-4495-a127-71465a1222aa)
+
 
 ### Confusion Matrix
 
-Include confusion matrix here
+![Screenshot 2024-11-18 220713](https://github.com/user-attachments/assets/24c536ac-2c14-42b1-bd5b-ebdf3ed11851)
+
 
 ### New Sample Data Prediction
 
-Include your sample cell image input and output of your model.
+![Screenshot 2024-11-18 220651](https://github.com/user-attachments/assets/3ebc847d-b372-40f9-a2a7-4ec5b71d0f8b)
+
 
 ## RESULT
+
+Thus, a deep neural network for Malaria infected cell recognition is developed and the performance is analyzed.

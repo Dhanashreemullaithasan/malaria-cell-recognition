@@ -51,10 +51,9 @@ Fit the model and predict the sample input.
 
 ```
 pip install matplotlib
-
 pip install seaborn
-
 pip install tensorflow
+pip install pandas
 
 import os
 import pandas as pd
@@ -69,19 +68,6 @@ from tensorflow.keras import utils
 from tensorflow.keras import models
 from sklearn.metrics import classification_report,confusion_matrix
 import tensorflow as tf
-# to share the GPU resources for multiple sessions
-from tensorflow.compat.v1.keras.backend import set_session
-config = tf.compat.v1.ConfigProto()
-config.gpu_options.allow_growth = True # dynamically grow the memory used on the GPU
-config.log_device_placement = True # to log device placement (on which device the operation ran)
-sess = tf.compat.v1.Session(config=config)
-set_session(sess)
-
-%matplotlib inline
-
-my_data_dir='dataset/cell_images'
-
-os .listdir(my_data_dir)
 
 from tensorflow.compat.v1.keras.backend import set_session
 config = tf.compat.v1.ConfigProto()
@@ -91,6 +77,10 @@ sess = tf.compat.v1.Session(config=config)
 set_session(sess)
 
 %matplotlib inline
+
+my_data_dir='dataset/cell_images'
+
+os .listdir(my_data_dir)
 
 test_path = my_data_dir+'/test/'
 train_path = my_data_dir+'/train/'
@@ -155,11 +145,26 @@ train_image_gen = image_gen.flow_from_directory(train_path,target_size=image_sha
                       class_mode='binary')
 train_image_gen.batch_size
 
+len(train_image_gen.classes)
+
+train_image_gen.total_batches_seen
+
+test_image_gen = image_gen.flow_from_directory(test_path,
+                                               target_size=image_shape[:2],
+                                               color_mode='rgb',
+                                               batch_size=batch_size,
+                                               class_mode='binary',shuffle=False)
+
+train_image_gen.class_indices
+
+results = model.fit(train_image_gen,epochs=5,
+                              validation_data=test_image_gen
+                             )
+
 model.save('cell_model.h5')
 
 losses = pd.DataFrame(model.history.history)
-
-print("DHANASHREE M 212221230018")
+print("Dhanashree M 212221230018")
 losses[['loss','val_loss']].plot()
 
 model.metrics_names
@@ -187,8 +192,7 @@ img  = tf.convert_to_tensor(np.asarray(p_img))
 img = tf.image.resize(img,(130,130))
 img=img.numpy()
 pred=bool(model.predict(img.reshape(1,130,130,3))<0.5 )
-plt.title("Model prediction: "+("Parasitized" if pred  else "Un Infected")
-			+"\nActual Value: "+str(dir_))
+plt.title("Model prediction: "+("Parasitized" if pred  else "Un Infected")+"\nActual Value: "+str(dir_))
 plt.axis("off")
 plt.imshow(img)
 plt.show()

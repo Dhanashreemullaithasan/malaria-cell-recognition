@@ -182,6 +182,7 @@ predictions = pred_probabilities > 0.5
 
 print(classification_report(test_image_gen.classes,predictions))
 
+print("Dhanashree M 212221230018")
 confusion_matrix(test_image_gen.classes,predictions)
 
 import random

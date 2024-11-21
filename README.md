@@ -202,23 +202,21 @@ plt.show()
 
 ### Training Loss, Validation Loss Vs Iteration Plot
 
-![Screenshot 2024-11-18 220706](https://github.com/user-attachments/assets/542c781b-de1d-45fe-8b54-f096171d9fc7)
+![Screenshot 2024-11-21 133853](https://github.com/user-attachments/assets/5d8aae39-f665-4105-bcc0-efaa7127fb8d)
 
 
 ### Classification Report
 
-![Screenshot 2024-11-18 220736](https://github.com/user-attachments/assets/04a26d01-67ca-4495-a127-71465a1222aa)
+![Screenshot 2024-11-21 133918](https://github.com/user-attachments/assets/a6159912-d65b-46bd-803b-9e89e8b12be1)
 
 
 ### Confusion Matrix
 
-![Screenshot 2024-11-18 220713](https://github.com/user-attachments/assets/24c536ac-2c14-42b1-bd5b-ebdf3ed11851)
-
+![Screenshot 2024-11-21 133959](https://github.com/user-attachments/assets/aeca6784-8aab-47d1-ba69-7ff0de5502c1)
 
 ### New Sample Data Prediction
 
-![Screenshot 2024-11-18 220651](https://github.com/user-attachments/assets/3ebc847d-b372-40f9-a2a7-4ec5b71d0f8b)
-
+![Screenshot 2024-11-21 134018](https://github.com/user-attachments/assets/e4c636a4-c47e-4598-bcf9-c29a1e3a1a79)
 
 ## RESULT
 
